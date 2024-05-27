@@ -1,18 +1,12 @@
 <script setup lang="ts">
-import {
-  computed,
-  onMounted,
-  ref,
-  defineProps,
-  defineEmits,
-  withDefaults,
-} from "vue";
+import { computed, onMounted, ref, defineProps } from "vue";
 import LikeOutlineIcon from "../assets/icons/like-outline-icon.vue";
 import DoneCircleIcon from "../assets/icons/done-circle-icon.vue";
 import CartIcon from "../assets/icons/cart-icon.vue";
 import LikeFilledIcon from "../assets/icons/like-filled-icon.vue";
 import { useStore } from "vuex";
 import { IItem } from "@/store/types";
+import { basePath } from "@/utils/config";
 
 interface Props {
   item: IItem;
@@ -58,7 +52,7 @@ const favoriteItemsIds = computed(
     <img
       class="main-section__card-img"
       v-if="item && item.image"
-      :src="item?.image.url"
+      :src="basePath + item?.image.url"
       :alt="item?.name"
     />
     <div class="main-section__card-wrapper">

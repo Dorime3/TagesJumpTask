@@ -1,3 +1,5 @@
+export const basePath =
+  process.env.NODE_ENV === "production" ? "/TagesJumpTask" : "";
 const sortOptions = [
   {
     label: "Цена по возрастанию",
