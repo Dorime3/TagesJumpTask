@@ -1,0 +1,20 @@
+@import "./base.css";
+@import "styles/header-section.css";
+@import "styles/main-section.css";
+
+.container {
+  max-width: 1680px;
+  padding: 0 96px;
+  margin: 0 auto;
+}
+/* toDO забиндить брейкпоинты в переменные */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 48px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    padding: 0 24px;
+  }
+}
