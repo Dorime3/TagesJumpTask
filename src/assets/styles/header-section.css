@@ -3,12 +3,14 @@
 
   .nav-menu__list {
     display: flex;
+    flex-wrap: wrap;
 
     .nav-menu__list-item {
       padding-right: 18px;
       font-size: 16px;
       font-weight: 400;
       color: #727783;
+      white-space: nowrap;
       cursor: pointer;
     }
 
@@ -37,12 +39,15 @@
   .header-section {
     margin: 8px 0;
 
-    .nav-menu__list-item {
-      padding-right: 6px;
-      font-size: 14px;
-    }
-    .nav-menu__list-item::after {
-      padding-left: 6px;
+    .nav-menu__list {
+
+      .nav-menu__list-item {
+        padding-right: 4px;
+        font-size: 14px;
+      }
+      .nav-menu__list-item::after {
+        padding-left: 4px;
+      }
     }
   }
 }
